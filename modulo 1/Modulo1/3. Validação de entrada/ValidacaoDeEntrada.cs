@@ -6,11 +6,14 @@
  */
 
 using System;
+using System.ComponentModel.Design;
 
 class ValidacaoDeEntrada
 {
     public static void Executar()
     {
+        Console.Clear();
+
         string senha;
 
         do
@@ -28,7 +31,7 @@ class ValidacaoDeEntrada
 
         Console.Clear();
         Console.WriteLine("Bem vindo!");
-
+        Console.ReadKey();
     }
 }
 

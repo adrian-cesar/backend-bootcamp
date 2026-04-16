@@ -17,6 +17,8 @@ class ConversorDeTemperatura
 {
     public static void Executar()
     {
+        Console.Clear();
+
         double temp = 0;
         bool isSucess = false;
 
@@ -36,7 +38,7 @@ class ConversorDeTemperatura
 
         Console.Clear();
         Console.WriteLine($"sua temperatura em celsius e {temp} e em Fahrenheit ela e {tempFah} ");
-
+        Console.ReadKey();
     }
 }
 

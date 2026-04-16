@@ -4,12 +4,12 @@
  * Ao final, exiba a soma de todos os números digitados.
  */
 
-using System;
-
 class SomaAcumulada
 {
     public static void Executar()
     {
+        Console.Clear();
+
         bool isSucess = false;
         bool sair = false;
         int num = 0;
@@ -42,6 +42,6 @@ class SomaAcumulada
         }
 
         Console.WriteLine($"A soma dos numeros digitados e: {soma}");
-
+        Console.ReadKey();
     }
 }

@@ -17,7 +17,10 @@
             Console.WriteLine("7 - Par ou impar");
             Console.WriteLine("8 - Conversor de temperatura");
             Console.WriteLine("9 - Calculadora");
-            Console.WriteLine("10 - Sair \n");
+            Console.WriteLine("10 - Maior e menor valor (vetor)");
+            Console.WriteLine("11 - Media da turma (vetor)");
+            Console.WriteLine("12 - Contagem de Par e Impar (Vetor)");
+            Console.WriteLine("13 - Sair \n");
             Console.WriteLine("Escolha: ");
 
             int.TryParse(Console.ReadLine(), out opcao);
@@ -61,6 +64,18 @@
                     break;
 
                 case 10:
+                    MaiorMenorValor.Executar();
+                    break;
+
+                case 11:
+                    MediaTurma.Executar();
+                    break;
+
+                case 12:
+                    ContagemParImpar.Executar();
+                    break;
+
+                case 13:
                     Console.WriteLine("Saindo...");
                     break;
 
@@ -69,6 +84,6 @@
                     break;
             }
 
-        } while (opcao != 10);
+        } while (opcao != 13);
     }
 }

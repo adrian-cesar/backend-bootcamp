@@ -14,6 +14,7 @@ class ParOuImpar
 {
     public static void Executar()
     {
+        Console.Clear();
         Console.WriteLine("Digite um numero :");
         bool IsSucess = int.TryParse(Console.ReadLine(), out int num);
 
@@ -26,8 +27,8 @@ class ParOuImpar
             string resultado = num % 2 == 0 ? "par" : "impar";
 
             Console.WriteLine($"seu numero e {resultado}");
+            Console.ReadKey();
         }
-
     }
 }
 

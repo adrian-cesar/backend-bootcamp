@@ -17,25 +17,54 @@ class MediaAritmetica
 {
     public static void Executar()
     {
-        Console.WriteLine("Digite sua primeira nota :");
-        double nota1 = double.Parse(Console.ReadLine());
-
         Console.Clear();
 
-        Console.WriteLine("Digite sua segunda nota :");
-        double nota2 = double.Parse(Console.ReadLine());
+        double nota1;
+        double nota2;
+        double nota3;
 
-        Console.Clear();
+        while (true)
+        {
+            Console.WriteLine("Digite sua primeira nota :");
+            if (double.TryParse(Console.ReadLine(), out nota1))
+                break;
 
-        Console.WriteLine("Digite sua terceira nota :");
-        double nota3 = double.Parse(Console.ReadLine());
+            Console.WriteLine("Digite um valor valido!");
+            Console.WriteLine("Pressione qualquer tecla para tentar novamente.");
+            Console.ReadKey();
+            Console.Clear();
+        }
 
-        Console.Clear();
+        while (true)
+        {
+            Console.WriteLine("Digite sua segunda nota :");
+            if (double.TryParse(Console.ReadLine(), out nota2))
+                break;
 
-        double media = 0;
+            Console.WriteLine("Digite um valor valido!");
+            Console.WriteLine("Pressione qualquer tecla para tentar novamente.");
+            Console.ReadKey();
+            Console.Clear();
+        }
+        
 
-        Console.WriteLine($"Sua media e : {(nota1 + nota2 + nota3) / 3}");
+        
+        while (true)
+        {
+            Console.WriteLine("Digite sua terceira nota :");
+            if (double.TryParse(Console.ReadLine(), out nota3))
+                break;
 
+            Console.WriteLine("Digite um valor valido!");
+            Console.WriteLine("Pressione qualquer tecla para tentar novamente.");
+            Console.ReadKey();
+            Console.Clear();
+        }
+
+        double media = (nota1 + nota2 + nota3) / 3;
+
+        Console.WriteLine($"Sua media e : {media}");
+        Console.ReadKey();
     }
 }
 

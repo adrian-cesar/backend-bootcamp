@@ -4,11 +4,14 @@
  */
 
 using System;
+using System.Net.Http.Headers;
 
 class Calculadora
 {
     public static void Executar()
     {
+        Console.Clear();
+
         bool sair = false;
 
         while (!sair)
@@ -212,6 +215,7 @@ class Calculadora
                 case 5:
 
                     Console.WriteLine("Programa finalizado....");
+                    Thread.Sleep(1000);
                     sair = true;
 
                     break;
@@ -222,7 +226,6 @@ class Calculadora
                     break;
             }
         }
-
     }
 }
 

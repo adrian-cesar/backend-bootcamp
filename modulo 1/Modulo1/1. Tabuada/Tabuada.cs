@@ -3,57 +3,61 @@
  * Peça ao usuário um número inteiro e exiba a tabuada dele de 1 a 10 usando `for`.
  */
 
-using System;
-
 class Tabuada
 {
     public static void Executar()
     {
         Console.Clear();
 
-        bool isSucess = false;
-        int num = 0;
+        int num, opcao;
         bool sair = false;
 
         while (!sair)
         {
-            while (!isSucess)
+            while (true)
             {
                 Console.WriteLine("Digite um numero para saber a tabuada do 1 - 10 :");
-                isSucess = int.TryParse(Console.ReadLine(), out num);
 
-                Console.Clear();
+                if (int.TryParse(Console.ReadLine(), out num))
+                    break;
 
-                if (!isSucess)
-                {
-                    Console.WriteLine("Digite um numero valido!");
-                }
+                Console.WriteLine("Digite um numero valido!");
+                Console.ReadKey();
+                Console.Clear(); 
             }
+
 
             for (int i = 1; i <= 10; i++)
             {
                 Console.WriteLine($"{num} X {i} = {num * i}");
             }
 
-            Console.WriteLine("\n 1. Digitar outro numero.\n 2. sair.");
-            int opcao = int.Parse(Console.ReadLine());
+            while (true)
+            {
+                Console.WriteLine("\n 1. Digitar outro numero.\n 2. sair.");
+
+                if (int.TryParse(Console.ReadLine(), out opcao) && (opcao == 1 || opcao == 2) )
+                    break;
+
+                Console.WriteLine("Digite uma opcao valida!");
+                Console.ReadKey();
+                Console.Clear();
+            }
+            
 
             switch (opcao)
             {
                 case 1:
-                    isSucess = false;
                     Console.Clear();
                     break;
 
                 case 2:
                     Console.Clear();
                     Console.WriteLine("Progama finalizado...");
+                    Thread.Sleep(1000);
                     sair = true;
                     break;
             }
         }
-
     }
-
-
 }

@@ -8,6 +8,7 @@ class ContagemRegressiva
 {
     public static async Task Executar()
     {
+        Console.Clear();
         Console.WriteLine("Contagem regressiva iniciada: \n");
 
         for (int i = 10; i >= 0; i--)

@@ -5,12 +5,12 @@
  * Use `for` para controlar o número de iterações.
  */
 
-using System;
-
 class MediaComRepeticao
 {
     public static void Executar()
     {
+        Console.Clear();
+
         double media, soma = 0;
         int quantidade = 0;
 
@@ -46,6 +46,7 @@ class MediaComRepeticao
         }
 
         Console.WriteLine($"Sua media e: {media = soma / quantidade}");
+        Console.ReadKey();
 
     }
 }
